@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Create Post";
+}
+
+@using (@Html.BeginForm("CreateNewPost", "CreatePost", FormMethod.Post))
+{
+    <h2>CreatePost</h2>
+    <hr />
+    <p>Title:</p> @Html.TextBox("txtTitle", null, new { required = "required" })
+    <br />
+    <p>Content:</p> @Html.TextBox("txtContent", null, new { required = "required" })
+    <br />
+    <input id="btnCreate" type="submit" value="Create" />
+}
+
+
